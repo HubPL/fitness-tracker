@@ -1,0 +1,8 @@
+rootProject.name = 'fitness-tracker'
+include 'fitness-tracker-api'
+include 'fitness-tracker-core'
+include 'fitness-tracker-data'
+include 'fitness-tracker-security'
+include 'fitness-tracker-common'
+include 'fitness-tracker-external'
+
