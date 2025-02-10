@@ -1,19 +1,10 @@
-plugins {
-    id 'java'
-}
-
-group = 'com.yourname.fitnesstracker'
-version = '0.0.1-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation project(':fitness-tracker-data')
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 }
 
-test {
-    useJUnitPlatform()
+bootJar {
+    enabled = false
 }

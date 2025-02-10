@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Table(name = "workouts")
 @Data
 public class Workout {
     @Id
@@ -17,10 +18,10 @@ public class Workout {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column(nullable = false)
+    @Column(name = "workout_date", nullable = false)
     private LocalDateTime workoutDate = LocalDateTime.now();
 
-    private Integer duration; // duration in minutes
+    private Integer duration;
 
     @ManyToMany
     @JoinTable(
